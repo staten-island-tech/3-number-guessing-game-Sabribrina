@@ -1,20 +1,18 @@
-guess = int(input('guess the number of children in my basement...'))
 history = []
-history.append(guess)
 
 import random
 secret = (random.randint(1,10))
-
+guess = 0
+print(secret)
 while secret is not guess:
-    for i in range (secret):
+        guess = int(input('guess the number of children in my basement...'))
+
         if secret < guess:
-            guess = int(input('guess the number of children in my basement...'))
-            history.append(i)
-            print('lower bro!! im not insane' and history)
-        if guess < secret:
-            guess = int(input('guess the number of children in my basement...'))
-            history.append(i)
-            print('higher dude' and history)
+            history.append(guess)
+            print('lower bro!! im not insane', history)
+        elif guess < secret:
+            history.append(guess)
+            print('higher dude', history)
 
 if guess == secret:
-    print('thats right!!' and history and guess)
+    print('HUZZAHHHHHH!! GOOD LITTLE LAD, FOR HIS LORDSHIP', history)
